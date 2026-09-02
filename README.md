@@ -12,9 +12,9 @@ Lab1 contains the implementation of the DES Algorithm written in `Go`.
 #### How to run:
 
 - Clone this repo: `git clone https://github.com/demivn15/Cryptography`.
-- Install Go in your system.
+- Install Go in your system (in Debian 13: `sudo apt install golang-go`).
 - Inside the Project directory execute `go run .` to run the programm without compiling it.
-- If you want to compile the project, you can run `go build` inside the Project directory. Then an executable will be generated.
+- If you want to compile the project, you can run `go build` inside the Project directory. An executable will be generated.
 
 ### DES Algorithm Overview
 
