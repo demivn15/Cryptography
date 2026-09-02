@@ -53,27 +53,6 @@ func DetectBase(s string) (Base, error) {
 	return BaseText, nil
 }
 
-func ConvertToBinaryString(input string) (string, error) {
-	base, err := DetectBase(input)
-	if err != nil {
-		return "", err
-	}
-
-	if base == BaseText {
-		var sb strings.Builder
-		for i := 0; i < len(input); i++ {
-			sb.WriteString(fmt.Sprintf("%08b", input[i]))
-		}
-		return sb.String(), nil
-	}
-
-	val, err := ParseFormattedString(input, base)
-	if err != nil {
-		return "", err
-	}
-	return fmt.Sprintf("%b", val), nil
-}
-
 func ParseFormattedString(s string, expectedBase Base) (int64, error) {
 	cleanStr := s
 	switch expectedBase {
@@ -96,6 +75,27 @@ func ParseFormattedString(s string, expectedBase Base) (int64, error) {
 	return val, nil
 }
 
+func ConvertToBinaryString(input string) (string, error) {
+	base, err := DetectBase(input)
+	if err != nil {
+		return "", err
+	}
+
+	if base == BaseText {
+		var sb strings.Builder
+		for i := 0; i < len(input); i++ {
+			sb.WriteString(fmt.Sprintf("%08b", input[i]))
+		}
+		return sb.String(), nil
+	}
+
+	val, err := ParseFormattedString(input, base)
+	if err != nil {
+		return "", err
+	}
+	return fmt.Sprintf("%b", val), nil
+}
+
 func ApplyPKCS7PaddingBits(bitStr string) string {
 	byteLen := (len(bitStr) + 7) / 8
 	padBytes := 8 - (byteLen % 8)
@@ -111,26 +111,6 @@ func ApplyPKCS7PaddingBits(bitStr string) string {
 		bitStr += fmt.Sprintf("%08b", padBytes)
 	}
 	return bitStr
-}
-
-func RemovePKCS7PaddingBits(bitStr string) (string, error) {
-	if len(bitStr)%64 != 0 || len(bitStr) == 0 {
-		return "", errors.New("invalid ciphertext bit length")
-	}
-
-	// Get the last byte (8 bits) to find padding count
-	lastByteBits := bitStr[len(bitStr)-8:]
-	padVal, err := strconv.ParseInt(lastByteBits, 2, 64)
-	if err != nil || padVal < 1 || padVal > 8 {
-		return "", errors.New("invalid PKCS7 padding byte")
-	}
-
-	padBitLen := int(padVal) * 8
-	if len(bitStr) < padBitLen {
-		return "", errors.New("padding length exceeds total length")
-	}
-
-	return bitStr[:len(bitStr)-padBitLen], nil
 }
 
 func BinaryBitsToText(bitStr string) string {

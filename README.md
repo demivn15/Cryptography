@@ -1,4 +1,5 @@
-# Cryptography
+
+# 🔑 Cryptography
 
 ## Lab 1 - DES Algorithm Implementation
 
@@ -11,11 +12,14 @@ Lab1 contains the implementation of the DES Algorithm written in Go.
 
 ### Implementation details
 
-The project consist of a local module called `utils` and the module with the DES Algorithm implementation: `myDES`. For comparison purposes, the `crypto/des` module is used inside `myDES_test-go`. Other Go modules are used to handle I/O operations, conversions, time metrics, testing, etc.
+The project consist of a local module called `utils` and the module with the DES Algorithm implementation: `myDES`. For comparison purposes, the `crypto/des` module is used inside `myDES_test.go`. Other Go modules are used to handle I/O operations, conversions, time metrics, testing, etc.
+
+- The `utils` module contains functions that help with converting raw strings to binary and the other way around. It also contains the function that helps with the rotation of bits inside the algorithm, and a function to handle user input.
+- The `myDES` module contains the actual implementation of the DES Algorithm. There, the different functions in charge of the permutations, fesitel, expansion, S-Boxes mapping, etc., are defined.
 
 When running the program, the user is prompted to enter a string. Then, the encryption and decryption process occurs. Finally, the program outputs the actual string entered by the user, the encryption and decryption results and the time it took to execute both processes.
 
-When running the `myDES_test-go` file, the DES implementation is tested against the one that is already imlemented inside the `crypto/des` module. Both encryption and decryption are tested.
+When running the `myDES_test.go` file, the DES implementation is tested against the one that is already imlemented inside the `crypto/des` module. Both encryption and decryption are tested.
 
 #### How to run:
 

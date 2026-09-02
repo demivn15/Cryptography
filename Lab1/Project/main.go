@@ -19,8 +19,8 @@ func main() {
 
 	paddedBitStr := utils.ApplyPKCS7PaddingBits(bitStr)
 
-	fmt.Printf("Original Input: %s\n", input)
-	fmt.Printf("Binary Representation (Padded): %s\n", paddedBitStr)
+	fmt.Printf("Binary Representation: %s\n", paddedBitStr)
+	fmt.Println("")
 
 	startEnc := time.Now()
 	var encryptedBlocks string
@@ -42,7 +42,8 @@ func main() {
 
 	fmt.Printf("Encrypted Output (Bits): %s\n", encryptedBlocks)
 	fmt.Printf("Encryption Execution Time: %v\n", encDuration)
+	fmt.Println("")
 	fmt.Printf("Decrypted Output (Bits): %s\n", decryptedBlocks)
 	fmt.Printf("Decryption Execution Time: %v\n", decDuration)
-	fmt.Printf("Encrypted Output (Bits): %s\n", textStr)
+	fmt.Printf("Decryption Output (String): %s\n", textStr)
 }
