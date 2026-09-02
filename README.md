@@ -4,6 +4,18 @@
 
 Lab1 contains the implementation of the DES Algorithm written in `Go`.
 
+### Environment setup
+
+- Operating System: Linux Debian 13
+- Programming Language: Go 1.24.4
+
+#### How to run:
+
+- Clone this repo: `git clone https://github.com/demivn15/Cryptography`.
+- Install Go in your system.
+- Inside the Project directory execute `go run .` to run the programm without compiling it.
+- If you want to compile the project, you can run `go build` inside the Project directory. Then an executable will be generated.
+
 ### DES Algorithm Overview
 
 The Data Encryption Standard Algorithm is a symmetric key algorithm, that is, an algorithm that uses the same cryptographic key for both encryption and decryption. This enctyption algorithm takes plaintext of 64-bit in size as input, and returns the corresponding ciphertext. The encryption is done in a process of 16 rounds, each of which uses a different subkey of 48 bits long. The whole process relies on predefined permutation tables that are applied to the plaintext and the key.
