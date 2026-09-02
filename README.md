@@ -2,12 +2,20 @@
 
 ## Lab 1 - DES Algorithm Implementation
 
-Lab1 contains the implementation of the DES Algorithm written in `Go`.
+Lab1 contains the implementation of the DES Algorithm written in Go.
 
 ### Environment setup
 
 - Operating System: Linux Debian 13
 - Programming Language: Go 1.24.4
+
+### Implementation details
+
+The project consist of a local module called `utils` and the module with the DES Algorithm implementation: `myDES`. For comparison purposes, the `crypto/des` module is used inside `myDES_test-go`. Other Go modules are used to handle I/O operations, conversions, time metrics, testing, etc.
+
+When running the program, the user is prompted to enter a string. Then, the encryption and decryption process occurs. Finally, the program outputs the actual string entered by the user, the encryption and decryption results and the time it took to execute both processes.
+
+When running the `myDES_test-go` file, the DES implementation is tested against the one that is already imlemented inside the `crypto/des` module. Both encryption and decryption are tested.
 
 #### How to run:
 
@@ -15,6 +23,7 @@ Lab1 contains the implementation of the DES Algorithm written in `Go`.
 - Install Go in your system (in Debian 13: `sudo apt install golang-go`).
 - Inside the Project directory execute `go run .` to run the programm without compiling it.
 - If you want to compile the project, you can run `go build` inside the Project directory. An executable will be generated.
+- In order to test the implementation against the DES Algorithm from the `crypto/des` module, execute the following command: `go test -v .` in the myDES directory inside the Project folder.
 
 ### DES Algorithm Overview
 
