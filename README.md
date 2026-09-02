@@ -26,13 +26,29 @@ The Data Encryption Standard Algorithm is a symmetric key algorithm, that is, an
 
 - The Feistel function takes R_n and performs an **expansion** over it;
 - then, the output of the expansion is xor'd with the generated subkey for the current round;
-- the xor output is processed to accomplish nonlinearity by shortening the input from 48 bits down to 32 bits;
-- then, the result goes through another permutation and becomes the output of the function.
+- the xor output is processed to accomplish *nonlinearity* by shortening the input from 48 bits down to 32 bits through a **mapping using eight tables called S-Boxes**;
+- then, the result goes through another **permutation** and becomes the output of the function.
+
+> The purpose of the **expansion** is to expand R_n from 32 to 48 bits so the xor operation can be performed with the 48-bit round key.
+
+> The purpose of performing a final **permutation** is contributing to diffusion.
+
+##### S-Boxes:
+
+- This process receives an input of 48 bits and divides it into eight chunks, each of 6 bits long. There is an S-Box for each chunk that allows to go from 6 bits long down to 4 bits;
+- the mapping takes both the first and last bit of each chunk and the resulting number from concatenating them becomes the row of the box;
+- the 4 bits left in the middle become the column of the box;
+- then, the value at that position becomes the output of processing the chunk. This value is represented with 4 bits;
+- all the results from processing each chunk are concatenated together to form a 32-bit long word.
 
 ##### Transformation of subkeys breakdown:
 
-- In order to generate the subkeys for each round the resulting key from **performing permuted choice one** is split into halves (28 bits each);
+- In order to generate the subkeys for each round the resulting key from performing **permuted choice one** is split into halves (28 bits each);
 - a left rotation is performed. The number of positions shifted depends on the current round (one position is shifted for rounds 1, 2, 9, 16, and two are shifted for any other round);
 - the resulting 56-bits key is performed a **round key permutation** on. This derives a 48-bit long subkey, the one used as input for the Feistel function.
+
+#### Decryption
+
+The algorithm used is the same. The only difference is the order of the round keys.
 
 ---
