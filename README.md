@@ -21,6 +21,8 @@ When running the program, the user is prompted to enter a string. Then, the encr
 
 When running the `myDES_test.go` file, the DES implementation is tested against the one that is already imlemented inside the `crypto/des` module. Both encryption and decryption are tested.
 
+> A known issue is that when the user enters a strign consisting of only numbers, the conversion to strings, later on, generates an ascii character.
+
 #### How to run:
 
 - Clone this repo: `git clone https://github.com/demivn15/Cryptography`.
