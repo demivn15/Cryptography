@@ -1,0 +1,5 @@
+func DESEncryptionECB() {
+}
+
+func DESDecryptionECB() {
+}
