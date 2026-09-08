@@ -1,13 +1,15 @@
-package myDES
+package desCore
 
 import (
 	"fmt"
 	"strconv"
 	"strings"
-	"des-lab/utils"
+	fst "des-project/deslib/feistel"
+	ks "des-project/deslib/keySchedule"
+	pmt "des-project/deslib/permutation"
 )
 
-var IPMap = [64]int{
+var initPtable = [64]uint8{
 	58, 50, 42, 34, 26, 18, 10, 2,
 	60, 52, 44, 36, 28, 20, 12, 4,
 	62, 54, 46, 38, 30, 22, 14, 6,
@@ -17,7 +19,7 @@ var IPMap = [64]int{
 	61, 53, 45, 37, 29, 21, 13, 5,
 	63, 55, 47, 39, 31, 23, 15, 7}
 
-var IPInvMap = [64]int{
+var invPTable = [64]uint8{
 	40, 8, 48, 16, 56, 24, 64, 32,
 	39, 7, 47, 15, 55, 23, 63, 31,
 	38, 6, 46, 14, 54, 22, 62, 30,
@@ -27,32 +29,27 @@ var IPInvMap = [64]int{
 	34, 2, 42, 10, 50, 18, 58, 26,
 	33, 1, 41, 9, 49, 17, 57, 25}
 
-func EncryptBlock64(block64Bit, key64Bit string) string {
-	permutation := PermuteString(block64Bit, IPMap[:])
-	L := permutation[:32]
-	R := permutation[32:]
-	keyState := InitialKeyPermutation(key64Bit)
-	for i := 1; i <= 16; i++ {
-		var subKey string
-		subKey, keyState = TransformKey(keyState, i)
-		L, R = EncryptionRound(L, R, subKey)
+func EncryptBlock(textBlock, key string) string {
+	initialPermutation := pmt.Permute(textBlock, initPtable[:])
+	L := initialPermutation[:32]
+	R := initialPermutation[32:]
+	var subKeyList [16]string = ks.DesKeySchedule(key)
+	for round := 1; round <= 16; round++ {
+		var subKey string = subKeyList[round]
+		L, R = fst.EncryptionRound(L, R, subKey)
 	}
 	finalRoundResult := R + L
-	return PermuteString(finalRoundResult, IPInvMap[:])
+	return pmt.Permute(finalRoundResult, invPTable[:])
 }
 
-func DecryptBlock64(cipherBlock64Bit, key64Bit string) string {
-	permutation := PermuteString(cipherBlock64Bit, IPMap[:])
-	L := permutation[:32]
-	R := permutation[32:]
-	var subKeys [16]string
-	keyState := InitialKeyPermutation(key64Bit)
-	for i := 1; i <= 16; i++ {
-		subKeys[i-1], keyState = TransformKey(keyState, i)
-	}
-	for i := 15; i >= 0; i-- {
-		L, R = EncryptionRound(L, R, subKeys[i])
+func DecryptBlock(cipherBlock, key string) string {
+	initialPermutation := pmt.Permute(cipherBlock, initPtable[:])
+	L := initialPermutation[:32]
+	R := initialPermutation[32:]
+	var subKeyList [16]string = ks.DesKeySchedule(key)
+	for round := 15; round >= 0; round-- {
+		L, R = fst.EncryptionRound(L, R, subKeys[round])
 	}
 	finalRoundResult := R + L
-	return PermuteString(finalRoundResult, IPInvMap[:])
+	return pmt.Permute(finalRoundResult, invPTable[:])
 }

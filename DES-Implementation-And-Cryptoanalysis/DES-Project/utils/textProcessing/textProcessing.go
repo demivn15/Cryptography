@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+	"os"
 )
 
 type Base uint8
@@ -91,9 +92,9 @@ func BinaryBitsToText(bitStr string) string {
 	return sb.String()
 }
 
-func ReadInput() string {
+func ReadInput(text string) string {
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Enter plaintext: ")
+	fmt.Printf("%s", text)
 	input, _ := reader.ReadString('\n')
 	return strings.TrimSpace(input)
 }

@@ -1,4 +1,4 @@
-package sboxes
+package sBoxes
 
 var SBoxes = [8][64]int{
 	//sBox_1
@@ -43,7 +43,7 @@ var SBoxes = [8][64]int{
 	2, 1, 14, 7, 4, 10, 8, 13, 15, 12, 9, 0, 3, 5, 6, 11},
 }
 
-func SBoxLookup(6BitSlice string) (int, int)  {
+func sBoxLookup(6BitSlice string) (int, int)  {
 	var rowBinary string = 6BitSlice[0] + 6BitSlice[5] // Take the first and last bit from the slice, concatenate them to form the row number in binary.
 	var colBinary string = 6BitSlice[1:5] // Take the 4 remaining bits from the middle. That is the column number in binary.
 	var rowInt, _ = strconv.ParseInt(rowBinary, 2, 64)
@@ -51,8 +51,8 @@ func SBoxLookup(6BitSlice string) (int, int)  {
 	return rowInt, colInt
 }
 
-func substitute(boxIndex) string {
-	var row, col, = sBoxLookup
+func Substitute(6bitSlice, boxIndex) string {
+	var row, col, = sBoxLookup(6bitSlice)
 	var substitution = SBoxes[boxIndex][row * 16 + col]
 	return fmt.Sprintf("%04b", substitution)
 }
