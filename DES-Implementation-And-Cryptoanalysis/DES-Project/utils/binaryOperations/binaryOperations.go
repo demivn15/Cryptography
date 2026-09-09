@@ -1,5 +1,7 @@
 package binaryOperations
 
+import "strings"
+
 func RotateLeftString(text string, numberOfRotations int) string {
 	textLength := len(text)
 	if textLength == 0 {

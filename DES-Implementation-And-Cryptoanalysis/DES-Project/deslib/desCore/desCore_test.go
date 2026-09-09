@@ -1,4 +1,4 @@
-package myDES_test
+package desCore_test
 
 import (
 	"crypto/des"
@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"testing"
 
-	"des-lab/myDES"
+	"desProject/deslib/desCore"
 )
 
 // Helper to convert byte slice to a 64-bit binary string

@@ -1,3 +1,3 @@
-module des-project
+module desProject
 
 go 1.24.4

@@ -1,5 +1,7 @@
 package permutation
 
+import "strings"
+
 func Permute(text string, table []int) string {
 	var permutation strings.Builder
 	for _, value := range table {

@@ -1,6 +1,7 @@
 package textPreprocessing
 
 import (
+	"bufio"
 	"errors"
 	"fmt"
 	"strconv"
@@ -97,4 +98,12 @@ func ReadInput(text string) string {
 	fmt.Printf("%s", text)
 	input, _ := reader.ReadString('\n')
 	return strings.TrimSpace(input)
+}
+
+func StringToBinary(s string) string {
+	var sb strings.Builder
+	for i := 0; i < len(s); i++ {
+		sb.WriteString(fmt.Sprintf("%08b", s[i]))
+	}
+	return sb.String()
 }

@@ -1,16 +1,14 @@
 package padding
 
-import "strconv"
+import (
+	"strconv"
+	"fmt"
+)
 
 func Pkcs7Pad(bitString string) string {
 	var bitStringLength int = len(bitString)
-	if bitStringLength < 8 {
-		for i := 0; i < 8 - bitStringLength; i++ {
-			bitString = "0" + bitString
-		}
-	}
-	var numberOfBytes int = (bitStringLength + 7) / 8
-	var missingBytes = 8 - (numberOfBytes % 8)
+	var totalBytes int = bitStringLength / 8
+	var missingBytes = 8 - (totalBytes % 8)
 	if missingBytes == 0 {
 		missingBytes = 8
 	}
@@ -22,7 +20,13 @@ func Pkcs7Pad(bitString string) string {
 
 func Pkcs7Unpad(bitString string) string {
 	bitStringLastBit := len(bitString)
-	paddingInt, _ := strconv.ParseInt(bitString[bitStringLastBit - 8:bitStringLastBit], 2, 64)
-	bitString = bitString[0:bitStringLastBit - 8 * int(paddingInt)]
-	return bitString
+	if bitStringLastBit < 8 {
+		return bitString
+	}
+	paddingInt, _ := strconv.ParseInt(bitString[bitStringLastBit - 8:], 2, 64)
+	var paddingBits int = int(paddingInt) * 8
+	if paddingBits > bitStringLastBit {
+		return bitString
+	}
+	return bitString[:bitStringLastBit - paddingBits]
 }

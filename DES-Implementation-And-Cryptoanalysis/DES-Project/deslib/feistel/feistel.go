@@ -4,9 +4,10 @@ import (
 	bo "desProject/utils/binaryOperations"
 	pmt "desProject/deslib/permutation"
 	sb "desProject/deslib/sBoxes"
+	"strings"
 )
 
-var expansionTable = [48]uint8{
+var expansionTable = [48]int{
 	32, 1, 2, 3, 4, 5,
 	4, 5, 6, 7, 8, 9,
 	8, 9, 10, 11, 12, 13,
@@ -27,7 +28,7 @@ func feistel(subKey string, R_n string) string {
 	xorResult := bo.XorBitStrings(expansion, subKey)
 	var feistelXor strings.Builder
 	for boxIndex := 0; boxIndex < 8; boxIndex++ {
-		slice := xorResult[i*6 : (i+1)*6]
+		slice := xorResult[boxIndex*6 : (boxIndex+1)*6]
 		feistelXor.WriteString(sb.Substitute(slice, boxIndex))
 	}
 	return pmt.Permute(feistelXor.String(), feistelPTable[:])

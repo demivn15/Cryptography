@@ -1,15 +1,12 @@
 package desCore
 
 import (
-	"fmt"
-	"strconv"
-	"strings"
-	fst "des-project/deslib/feistel"
-	ks "des-project/deslib/keySchedule"
-	pmt "des-project/deslib/permutation"
+	fst "desProject/deslib/feistel"
+	ks "desProject/deslib/keySchedule"
+	pmt "desProject/deslib/permutation"
 )
 
-var initPtable = [64]uint8{
+var initPtable = [64]int{
 	58, 50, 42, 34, 26, 18, 10, 2,
 	60, 52, 44, 36, 28, 20, 12, 4,
 	62, 54, 46, 38, 30, 22, 14, 6,
@@ -19,7 +16,7 @@ var initPtable = [64]uint8{
 	61, 53, 45, 37, 29, 21, 13, 5,
 	63, 55, 47, 39, 31, 23, 15, 7}
 
-var invPTable = [64]uint8{
+var invPTable = [64]int{
 	40, 8, 48, 16, 56, 24, 64, 32,
 	39, 7, 47, 15, 55, 23, 63, 31,
 	38, 6, 46, 14, 54, 22, 62, 30,
@@ -33,8 +30,8 @@ func EncryptBlock(textBlock, key string) string {
 	initialPermutation := pmt.Permute(textBlock, initPtable[:])
 	L := initialPermutation[:32]
 	R := initialPermutation[32:]
-	var subKeyList [16]string = ks.DesKeySchedule(key)
-	for round := 1; round <= 16; round++ {
+	var subKeyList []string = ks.DesKeySchedule(key)
+	for round := 0; round <= 15; round++ {
 		var subKey string = subKeyList[round]
 		L, R = fst.EncryptionRound(L, R, subKey)
 	}
@@ -46,9 +43,9 @@ func DecryptBlock(cipherBlock, key string) string {
 	initialPermutation := pmt.Permute(cipherBlock, initPtable[:])
 	L := initialPermutation[:32]
 	R := initialPermutation[32:]
-	var subKeyList [16]string = ks.DesKeySchedule(key)
+	var subKeyList []string = ks.DesKeySchedule(key)
 	for round := 15; round >= 0; round-- {
-		L, R = fst.EncryptionRound(L, R, subKeys[round])
+		L, R = fst.EncryptionRound(L, R, subKeyList[round])
 	}
 	finalRoundResult := R + L
 	return pmt.Permute(finalRoundResult, invPTable[:])

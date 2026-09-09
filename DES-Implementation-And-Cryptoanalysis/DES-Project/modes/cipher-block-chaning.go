@@ -1,5 +1,0 @@
-func DESEncryptionCBC() {
-}
-
-func DESDecryptionCBC() {
-}

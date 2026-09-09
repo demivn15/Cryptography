@@ -3,9 +3,10 @@ package keySchedule
 import (
 	pmt "desProject/deslib/permutation"
 	bo "desProject/utils/binaryOperations"
+	tp "desProject/utils/textProcessing"
 )
 
-var pc1 = [56]uint8{
+var pc1 = [56]int{
 	57, 49, 41, 33, 25, 17, 9, 1, 
 	58, 50, 42, 34, 26, 18,	10, 2, 
 	59, 51, 43, 35, 27, 19, 11, 3, 
@@ -14,7 +15,7 @@ var pc1 = [56]uint8{
 	30, 22, 14, 6, 61, 53, 45, 37, 
 	29, 21, 13, 5, 28, 20, 12, 4}
 
-var pc2 = [48]uint8{
+var pc2 = [48]int{
 	14, 17, 11, 24, 1, 5, 3, 28, 
 	15, 6, 21, 10, 23, 19, 12, 4, 
 	26, 8, 16, 7, 27, 20, 13, 2,
@@ -44,10 +45,15 @@ func transformKey(permutedKey string, round int) (string, string) {
 }
 
 func DesKeySchedule(key string) []string {
-	var subKeyList [16]string
+	if len(key) == 8 {
+		key = tp.StringToBinary(key)
+	}
+	var subKeyList []string
 	var permutedKey string = initialKeyPermutation(key)
-	for round := 0; round == 15; round++ {
-		subKeyList[round] = transformKey(permutedKey, round)
+	for round := 1; round <= 16; round++ {
+		subKey, nextKeyBits := transformKey(permutedKey, round)
+		subKeyList = append(subKeyList, subKey)
+		permutedKey = nextKeyBits
 	}
 	return subKeyList
 }
