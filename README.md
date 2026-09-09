@@ -1,35 +1,33 @@
-
 # 🔑 Cryptography
 
 ## Lab 1 - DES Algorithm Implementation
 
-Lab1 contains the implementation of the DES Algorithm written in Go.
+Lab 1 contains the technical implementation, mode analysis, and parallel cryptanalysis of the Data Encryption Standard (DES) cipher written in Go
 
 ### Environment setup
 
 - Operating System: Linux Debian 13
 - Programming Language: Go 1.24.4
+- Execution Environment: 4 Physical CPU Cores
 
 ### Implementation details
 
-The project consist of a local module called `utils` and the module with the DES Algorithm implementation: `myDES`. For comparison purposes, the `crypto/des` module is used inside `myDES_test.go`. Other Go modules are used to handle I/O operations, conversions, time metrics, testing, etc.
+The repository consists of modular packages handling core cryptographic primitives, operational modes, and parallel search routines:
 
-- The `utils` module contains functions that help with converting raw strings to binary and the other way around. It also contains the function that helps with the rotation of bits inside the algorithm, and a function to handle user input.
-- The `myDES` module contains the actual implementation of the DES Algorithm. There, the different functions in charge of the permutations, fesitel, expansion, S-Boxes mapping, etc., are defined.
-
-When running the program, the user is prompted to enter a string. Then, the encryption and decryption process occurs. Finally, the program outputs the actual string entered by the user, the encryption and decryption results and the time it took to execute both processes.
-
-When running the `myDES_test.go` file, the DES implementation is tested against the one that is already imlemented inside the `crypto/des` module. Both encryption and decryption are tested.
-
-> A known issue is that when the user enters a string consisting of only numbers, the conversion to string, later on, generates an ascii character.
+- **`utils`**: Auxiliary functions handling bitwise manipulation, ASCII/binary conversions, bit rotations, and user I/O.
+- **`myDES`**: The full Feistel cipher pipeline, including key generation, S-Box substitution, initial/final permutations, and the core $F$-function
+- **`modes`**: Implementations of Electronic Codebook (ECB) and Cipher Block Chaining (CBC)] modes along with PKCS#7 padding.
+- **`bruteforce`**: A concurrent key-recovery engine utilizing goroutines and worker pools.
 
 #### How to run:
 
 - Clone this repo: `git clone https://github.com/demivn15/Cryptography`.
-- Install Go in your system (in Debian 13: `sudo apt install golang-go`).
-- Inside the Project directory execute `go run .` to run the programm without compiling it.
-- If you want to compile the project, you can run `go build` inside the Project directory. An executable will be generated.
-- In order to test the implementation against the DES Algorithm from the `crypto/des` module, execute the following command: `go test -v .` in the myDES directory inside the Project folder.
+- Install Go on your system: `sudo apt install golang-go`.
+- Run the interactive CLI: `go run .`.
+- Execute unit and verification tests against standard vectors: `go test -v ./...`.
+- Run mode experiments and parallel benchmarks: `go run main.go --benchmark`.
+
+---
 
 ### DES Algorithm Overview
 
@@ -78,4 +76,23 @@ The Data Encryption Standard Algorithm is a symmetric key algorithm, that is, an
 
 The algorithm used is the same. The only difference is the order of the round keys.
 
+#### ECB vs. CBC Operational Modes
+- **Electronic Codebook (ECB)**: Encrypts 64-bit blocks independently ($C_i = E_K(P_i)$). Deterministic mapping causes identical input blocks to produce identical output blocks ($P_i = P_j \implies C_i = C_j$), leaking statistical and visual patterns in structured plaintexts.
+- **Cipher Block Chaining (CBC)**: XORs each plaintext block with the preceding ciphertext block ($C_i = E_K(P_i \oplus C_{i-1})$) using a 64-bit Initialization Vector ($IV$) for the initial block. This feedback loop breaks input repetition, mapping identical plaintext blocks to pseudorandom, distinct ciphertexts.
+
+#### Error Propagation Mechanics
+Introducing a single-bit flip into Bit 5 of Block 2 ($C_2$) yields distinct recovery profiles upon decryption:
+- **ECB Mode**: Corrupts Block 2 completely ($\approx 50\%$ bit error rate due to the Feistel avalanche effect), while surrounding blocks ($P_1, P_3$) recover with 0% error.
+- **CBC Mode**: Corrupts Block 2 completely ($57.81\%$ bit error rate) and propagates exactly 1 bit flip into $P_3$ ($1.56\%$ error rate) because $P_3 = D_K(C_3) \oplus C_2$.
+
+#### Parallel Brute-Force Key Recovery & Extrapolation
+To evaluate 56-bit key entropy:
+- **Worker Pool Scaling**: Evaluated over a $2^{20}$ search space across concurrent workers on 4 CPU cores. Throughput scales from $20,719.54\text{ keys/s}$ (1 worker) to $53,145.75\text{ keys/s}$ (4 workers, $3.85\times$ speedup).
+- **Early Termination Dynamics**: Larger worker pools split search chunks, encountering target keys early in chunk intervals and yielding super-linear speedups ($11.20\times$ speedup with 8 workers).
+- **Full $2^{56}$ Key Space Extrapolation**: At a peak throughput rate of $R = 500,000\text{ keys/s}$ on a single workstation, average recovery ($2^{55}$ keys) takes $\approx 2,283.37\text{ years}$. However, distributing the search across 10,000 GPU nodes operating at $10^{11}\text{ keys/s}$ reduces search time to $\approx 4.17\text{ days}$, rendering 56-bit keys cryptographically obsolete.
+
 ---
+
+### DES Algorithm Architecture
+
+The Data Encryption Standard is a symmetric Feistel block cipher that maps 64-bit plaintext blocks to 64-bit ciphertext blocks across 16 processing rounds.
