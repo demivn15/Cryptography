@@ -5,23 +5,31 @@ import (
 	pd "desProject/utils/padding"
 )
 
-
 func DESEncryptionECB(plaintext string, encryptionKey string) string {
-	var paddedPlaintext string = pd.Pkcs7Pad(plaintext)
+	if len(plaintext) == 0 {
+		return ""
+	}
+	paddedPlaintext := pd.Pkcs7Pad(plaintext)
 	var completeEncryption string
+
 	for i := 0; i < len(paddedPlaintext); i += 64 {
-		var block string = paddedPlaintext[i : i+64]
+		block := paddedPlaintext[i : i+64]
 		completeEncryption += desCore.EncryptBlock(block, encryptionKey)
 	}
 	return completeEncryption
 }
 
 func DESDecryptionECB(encryptedText string, encryptionKey string) string {
+	// Guard against empty input or misaligned ciphertext blocks
+	if len(encryptedText) == 0 || len(encryptedText)%64 != 0 {
+		return ""
+	}
+
 	var completeDecryption string
 	for i := 0; i < len(encryptedText); i += 64 {
-		var block string = completeDecryption[i:i+64]
+		block := encryptedText[i : i+64]
 		completeDecryption += desCore.DecryptBlock(block, encryptionKey)
 	}
-	var unpaddedPlaintext string = pd.Pkcs7Unpad(completeDecryption)
-	return unpaddedPlaintext
+	
+	return pd.Pkcs7Unpad(completeDecryption)
 }

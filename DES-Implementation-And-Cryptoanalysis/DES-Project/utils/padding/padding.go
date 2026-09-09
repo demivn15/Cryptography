@@ -1,32 +1,61 @@
 package padding
 
 import (
-	"strconv"
 	"fmt"
+	"strconv"
 )
 
 func Pkcs7Pad(bitString string) string {
-	var bitStringLength int = len(bitString)
-	var totalBytes int = bitStringLength / 8
-	var missingBytes = 8 - (totalBytes % 8)
-	if missingBytes == 0 {
-		missingBytes = 8
+	// Total bits must be padded up to a multiple of 64 bits (8 bytes)
+	currentBits := len(bitString)
+	remainderBits := currentBits % 64
+	missingBits := 64 - remainderBits
+	
+	if missingBits == 0 {
+		missingBits = 64
 	}
-	for bitPosition := 0; bitPosition < missingBytes; bitPosition++ {
-		bitString += fmt.Sprintf("%08b", missingBytes)
+
+	missingBytes := missingBits / 8
+	paddingByteBinary := fmt.Sprintf("%08b", missingBytes)
+
+	padded := bitString
+	for i := 0; i < missingBytes; i++ {
+		padded += paddingByteBinary
 	}
-	return bitString
+	return padded
 }
 
 func Pkcs7Unpad(bitString string) string {
-	bitStringLastBit := len(bitString)
-	if bitStringLastBit < 8 {
+	bitStringLength := len(bitString)
+	// Must be at least one 64-bit block and aligned to 64 bits
+	if bitStringLength < 64 || bitStringLength%64 != 0 {
 		return bitString
 	}
-	paddingInt, _ := strconv.ParseInt(bitString[bitStringLastBit - 8:], 2, 64)
-	var paddingBits int = int(paddingInt) * 8
-	if paddingBits > bitStringLastBit {
+
+	// Read last byte (8 bits) for padding count
+	lastByteBits := bitString[bitStringLength-8:]
+	paddingInt, err := strconv.ParseInt(lastByteBits, 2, 64)
+	if err != nil {
 		return bitString
 	}
-	return bitString[:bitStringLastBit - paddingBits]
+
+	paddingBytes := int(paddingInt)
+	if paddingBytes <= 0 || paddingBytes > 8 {
+		return bitString
+	}
+
+	paddingBits := paddingBytes * 8
+	if paddingBits > bitStringLength {
+		return bitString
+	}
+
+	// Verify all padding bytes match
+	expectedPaddingByte := fmt.Sprintf("%08b", paddingBytes)
+	for i := bitStringLength - paddingBits; i < bitStringLength; i += 8 {
+		if bitString[i:i+8] != expectedPaddingByte {
+			return bitString
+		}
+	}
+
+	return bitString[:bitStringLength-paddingBits]
 }
