@@ -11,7 +11,6 @@ func BruteForceDES(plaintext string, ciphertext string, start uint64, end uint64
 		candidatesTested++
 		candidateKey := keyspace.BuildCandidateKey(candidateIdx, numUnknownBits, fixedPrefixBits)
 		testedCipher := desCore.EncryptBlock(plaintext, candidateKey)
-		
 		if testedCipher == ciphertext {
 			return candidateKey, candidatesTested, true
 		}
