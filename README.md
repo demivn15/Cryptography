@@ -94,5 +94,65 @@ To evaluate 56-bit key entropy:
 ---
 
 ### DES Algorithm Architecture
-
 The Data Encryption Standard is a symmetric Feistel block cipher that maps 64-bit plaintext blocks to 64-bit ciphertext blocks across 16 processing rounds.
+
+## Lab 3:  AES  Implementation
+
+This project provides a modular, pure-software implementation of the **Advanced Encryption Standard (AES)** written in Go. It supports all three standard key lengths (**AES-128**, **AES-192**, and **AES-256**) and includes comprehensive validation test suites and performance benchmarking tools.
+
+---
+
+### What is AES?
+
+The **Advanced Encryption Standard (AES)** is a symmetric block cipher algorithm established by the U.S. National Institute of Standards and Technology (NIST). It operates on a fixed 128-bit (16-byte) block size and supports three key lengths:
+* **AES-128**: Uses a 128-bit key across 10 rounds of transformation.
+* **AES-192**: Uses a 192-bit key across 12 rounds of transformation.
+* **AES-256**: Uses a 256-bit key across 14 rounds of transformation.
+
+The cipher relies on a substitution-permutation network (SPN) architecture involving core operations such as byte substitution (`SubBytes`), row shifting (`ShiftRows`), column mixing (`MixColumns`), and key addition (`AddRoundKey`).
+
+---
+
+### Project Structure
+
+The project is structured as a modular package (`aesCore`) containing the core cryptographic logic, automated tests, and performance benchmarks:
+
+```text
+AES-Implementation/
+└── aesCore/
+    ├── addRoundKey.go       # Implements the AddRoundKey state operation
+    ├── aes.go               # Main encryption, decryption, and key expansion coordination
+    ├── aes_test.go          # Functional, round-trip, and NIST test vector validation
+    ├── aes_bench_test.go    # Performance benchmarking suite (1 MB and 10 MB workloads)
+    ├── keySchedule.go       # Key expansion schedule for 128, 192, and 256-bit keys
+    ├── mixColumns.go        # Galois Field GF(2^8) arithmetic and MixColumns / InvMixColumns
+    ├── shiftRows.go         # Row shifting and inverse row shifting operations
+    ├── subBytes.go          # Forward and inverse S-box byte substitution tables/mappings
+    └── utils.go             # Helper utilities (e.g., byte-level XOR operations)
+```
+
+### Go Installation
+
+To build and test this project, you need the Go runtime installed on your machine.
+Download Go: Visit the official Go Downloads page and download the installer for your operating system (Linux, macOS, or Windows).
+Verify Installation: Open your terminal or command prompt and verify the installation by running:
+
+```bash
+    go version
+```
+
+### How to Test and Execute the Code
+Navigate to the project root directory where the aesCore package is located to run the tests and benchmarks.
+
+1. Run Functional and NIST Test Suites
+To verify that all encryption, decryption, inverse transformations, and official NIST test vectors pass correctly:
+
+```bash
+    go test -v ./aesCore
+```
+
+2. Run Performance Benchmarks
+To evaluate the encryption and decryption performance (measuring execution time and throughput for 1 MB and 10 MB workloads across 3 repeated runs):
+```bash
+    go test -v -run TestAESBenchmark ./aesCore
+```
