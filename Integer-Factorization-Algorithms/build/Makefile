@@ -168,6 +168,33 @@ Catch2WithMain/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build
 .PHONY : Catch2WithMain/fast
 
+src/extended_euc.o: src/extended_euc.cpp.o
+.PHONY : src/extended_euc.o
+
+# target to build an object file
+src/extended_euc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/extended_euc.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/extended_euc.cpp.o
+.PHONY : src/extended_euc.cpp.o
+
+src/extended_euc.i: src/extended_euc.cpp.i
+.PHONY : src/extended_euc.i
+
+# target to preprocess a source file
+src/extended_euc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/extended_euc.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/extended_euc.cpp.i
+.PHONY : src/extended_euc.cpp.i
+
+src/extended_euc.s: src/extended_euc.cpp.s
+.PHONY : src/extended_euc.s
+
+# target to generate assembly for a file
+src/extended_euc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/extended_euc.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/extended_euc.cpp.s
+.PHONY : src/extended_euc.cpp.s
+
 src/fermat.o: src/fermat.cpp.o
 .PHONY : src/fermat.o
 
@@ -336,6 +363,9 @@ help:
 	@echo "... Catch2WithMain"
 	@echo "... factor_app"
 	@echo "... run_tests"
+	@echo "... src/extended_euc.o"
+	@echo "... src/extended_euc.i"
+	@echo "... src/extended_euc.s"
 	@echo "... src/fermat.o"
 	@echo "... src/fermat.i"
 	@echo "... src/fermat.s"

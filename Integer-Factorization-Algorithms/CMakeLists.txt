@@ -3,7 +3,6 @@ project(FactorizationProject)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# 1. Automatically fetch Catch2 v3 for tests
 include(FetchContent)
 FetchContent_Declare(
     Catch2
@@ -11,25 +10,26 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(Catch2)
 
-# 2. Define the main application executable
+# Ensure src/extended_euc.cpp is included here
 add_executable(factor_app
     src/main.cpp
     src/fermat.cpp
     src/trial_division.cpp
     src/pollards_rho.cpp
     src/rsa.cpp
+    src/extended_euc.cpp
 )
 
-# Tell CMake where to look for header files (#include "...")
 target_include_directories(factor_app PRIVATE include)
 
-# 3. Define the unit test executable
+# Ensure src/extended_euc.cpp is included here as well
 add_executable(run_tests
     tests/test_factorization.cpp
     src/fermat.cpp
     src/trial_division.cpp
     src/pollards_rho.cpp
     src/rsa.cpp
+    src/extended_euc.cpp
 )
 
 target_include_directories(run_tests PRIVATE include)

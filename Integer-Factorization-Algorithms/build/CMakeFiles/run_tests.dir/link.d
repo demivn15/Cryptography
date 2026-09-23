@@ -7,6 +7,7 @@ run_tests: \
   CMakeFiles/run_tests.dir/src/trial_division.cpp.o \
   CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o \
   CMakeFiles/run_tests.dir/src/rsa.cpp.o \
+  CMakeFiles/run_tests.dir/src/extended_euc.cpp.o \
   _deps/catch2-build/src/libCatch2Main.a \
   _deps/catch2-build/src/libCatch2.a \
   /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so \
@@ -52,6 +53,8 @@ CMakeFiles/run_tests.dir/src/trial_division.cpp.o:
 CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o:
 
 CMakeFiles/run_tests.dir/src/rsa.cpp.o:
+
+CMakeFiles/run_tests.dir/src/extended_euc.cpp.o:
 
 _deps/catch2-build/src/libCatch2Main.a:
 

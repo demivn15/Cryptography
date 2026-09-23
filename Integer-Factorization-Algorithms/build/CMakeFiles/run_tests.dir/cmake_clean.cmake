@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/run_tests.dir/link.d"
+  "CMakeFiles/run_tests.dir/src/extended_euc.cpp.o"
+  "CMakeFiles/run_tests.dir/src/extended_euc.cpp.o.d"
   "CMakeFiles/run_tests.dir/src/fermat.cpp.o"
   "CMakeFiles/run_tests.dir/src/fermat.cpp.o.d"
   "CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o"
