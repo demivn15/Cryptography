@@ -1,0 +1,10 @@
+/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles/factor_app.dir
+/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles/run_tests.dir
+/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles/edit_cache.dir
+/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles/rebuild_cache.dir
+/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/_deps/catch2-build/CMakeFiles/edit_cache.dir
+/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/_deps/catch2-build/CMakeFiles/rebuild_cache.dir
+/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/_deps/catch2-build/src/CMakeFiles/Catch2.dir
+/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/_deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir
+/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/_deps/catch2-build/src/CMakeFiles/edit_cache.dir
+/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/_deps/catch2-build/src/CMakeFiles/rebuild_cache.dir

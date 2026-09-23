@@ -18,7 +18,7 @@ var mixColumnsInverseTable [16]byte = [16]byte{
 func gfMul(a, b byte) byte {
 	var res byte = 0
 	for i := 0; i < 8; i++ {
-		if b&1 != 0 {
+		if b & 1 != 0 {
 			res ^= a
 		}
 		hiBitSet := (a & 0x80) != 0
