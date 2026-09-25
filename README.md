@@ -214,8 +214,8 @@ make
 
 # Build Outputs
 
-This will generate three primary executables inside your `build` directory[cite: 3]:
+This will generate three primary executables inside your `build` directory:
 
-* **`app`**: The interactive Cryptography Toolkit CLI[cite: 3].
-* **`run_tests`**: The Catch2 automated test suite[cite: 3].
-* **`run_benchmark`**: The experimental evaluation & Fermat analysis runner[cite: 3].
+* **`app`**: The interactive Cryptography Toolkit CLI.
+* **`run_tests`**: The Catch2 automated test suite.
+* **`run_benchmark`**: The experimental evaluation & Fermat analysis runner.
