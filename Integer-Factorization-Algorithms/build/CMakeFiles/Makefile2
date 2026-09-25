@@ -63,14 +63,16 @@ CMAKE_BINARY_DIR = /home/demivn15/Documents/College/Seventh-Semester/Workshops/C
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/factor_app.dir/all
+all: CMakeFiles/app.dir/all
 all: CMakeFiles/run_tests.dir/all
+all: CMakeFiles/run_benchmark.dir/all
 all: _deps/catch2-build/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/factor_app.dir/codegen
+codegen: CMakeFiles/app.dir/codegen
 codegen: CMakeFiles/run_tests.dir/codegen
+codegen: CMakeFiles/run_benchmark.dir/codegen
 codegen: _deps/catch2-build/codegen
 .PHONY : codegen
 
@@ -79,8 +81,9 @@ preinstall: _deps/catch2-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/factor_app.dir/clean
+clean: CMakeFiles/app.dir/clean
 clean: CMakeFiles/run_tests.dir/clean
+clean: CMakeFiles/run_benchmark.dir/clean
 clean: _deps/catch2-build/clean
 .PHONY : clean
 
@@ -126,43 +129,43 @@ _deps/catch2-build/src/clean: _deps/catch2-build/src/CMakeFiles/Catch2WithMain.d
 .PHONY : _deps/catch2-build/src/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/factor_app.dir
+# Target rules for target CMakeFiles/app.dir
 
 # All Build rule for target.
-CMakeFiles/factor_app.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=89,90,91,92,93,94 "Built target factor_app"
-.PHONY : CMakeFiles/factor_app.dir/all
+CMakeFiles/app.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=85,86,87,88,89,90 "Built target app"
+.PHONY : CMakeFiles/app.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/factor_app.dir/rule: cmake_check_build_system
+CMakeFiles/app.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/factor_app.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/app.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 0
-.PHONY : CMakeFiles/factor_app.dir/rule
+.PHONY : CMakeFiles/app.dir/rule
 
 # Convenience name for target.
-factor_app: CMakeFiles/factor_app.dir/rule
-.PHONY : factor_app
+app: CMakeFiles/app.dir/rule
+.PHONY : app
 
 # codegen rule for target.
-CMakeFiles/factor_app.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=89,90,91,92,93,94 "Finished codegen for target factor_app"
-.PHONY : CMakeFiles/factor_app.dir/codegen
+CMakeFiles/app.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=85,86,87,88,89,90 "Finished codegen for target app"
+.PHONY : CMakeFiles/app.dir/codegen
 
 # clean rule for target.
-CMakeFiles/factor_app.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/clean
-.PHONY : CMakeFiles/factor_app.dir/clean
+CMakeFiles/app.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/clean
+.PHONY : CMakeFiles/app.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/run_tests.dir
 
 # All Build rule for target.
-CMakeFiles/run_tests.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 CMakeFiles/run_tests.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
+CMakeFiles/run_tests.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=95,96,97,98,99,100 "Built target run_tests"
@@ -170,7 +173,7 @@ CMakeFiles/run_tests.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 94
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 90
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
@@ -191,18 +194,50 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/run_benchmark.dir
+
+# All Build rule for target.
+CMakeFiles/run_benchmark.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=91,92,93,94 "Built target run_benchmark"
+.PHONY : CMakeFiles/run_benchmark.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/run_benchmark.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run_benchmark.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 0
+.PHONY : CMakeFiles/run_benchmark.dir/rule
+
+# Convenience name for target.
+run_benchmark: CMakeFiles/run_benchmark.dir/rule
+.PHONY : run_benchmark
+
+# codegen rule for target.
+CMakeFiles/run_benchmark.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=91,92,93,94 "Finished codegen for target run_benchmark"
+.PHONY : CMakeFiles/run_benchmark.dir/codegen
+
+# clean rule for target.
+CMakeFiles/run_benchmark.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/clean
+.PHONY : CMakeFiles/run_benchmark.dir/clean
+
+#=============================================================================
 # Target rules for target _deps/catch2-build/src/CMakeFiles/Catch2.dir
 
 # All Build rule for target.
 _deps/catch2-build/src/CMakeFiles/Catch2.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86 "Built target Catch2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83 "Built target Catch2"
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/catch2-build/src/CMakeFiles/Catch2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 86
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 83
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 0
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2.dir/rule
@@ -214,7 +249,7 @@ Catch2: _deps/catch2-build/src/CMakeFiles/Catch2.dir/rule
 # codegen rule for target.
 _deps/catch2-build/src/CMakeFiles/Catch2.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86 "Finished codegen for target Catch2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83 "Finished codegen for target Catch2"
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2.dir/codegen
 
 # clean rule for target.
@@ -229,12 +264,12 @@ _deps/catch2-build/src/CMakeFiles/Catch2.dir/clean:
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=87,88 "Built target Catch2WithMain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=84 "Built target Catch2WithMain"
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 88
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 84
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles 0
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/rule
@@ -246,7 +281,7 @@ Catch2WithMain: _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/rule
 # codegen rule for target.
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=87,88 "Finished codegen for target Catch2WithMain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=84 "Finished codegen for target Catch2WithMain"
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/codegen
 
 # clean rule for target.

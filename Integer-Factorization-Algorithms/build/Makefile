@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named factor_app
+# Target rules for targets named app
 
 # Build rule for target.
-factor_app: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 factor_app
-.PHONY : factor_app
+app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app
+.PHONY : app
 
 # fast build rule for target.
-factor_app/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/build
-.PHONY : factor_app/fast
+app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
+.PHONY : app/fast
 
 #=============================================================================
 # Target rules for targets named run_tests
@@ -141,6 +141,19 @@ run_tests: cmake_check_build_system
 run_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
 .PHONY : run_tests/fast
+
+#=============================================================================
+# Target rules for targets named run_benchmark
+
+# Build rule for target.
+run_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_benchmark
+.PHONY : run_benchmark
+
+# fast build rule for target.
+run_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/build
+.PHONY : run_benchmark/fast
 
 #=============================================================================
 # Target rules for targets named Catch2
@@ -168,188 +181,221 @@ Catch2WithMain/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build
 .PHONY : Catch2WithMain/fast
 
-src/extended_euc.o: src/extended_euc.cpp.o
-.PHONY : src/extended_euc.o
+src/benchmark.o: src/benchmark.cc.o
+.PHONY : src/benchmark.o
 
 # target to build an object file
-src/extended_euc.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/extended_euc.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/extended_euc.cpp.o
-.PHONY : src/extended_euc.cpp.o
+src/benchmark.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/benchmark.cc.o
+.PHONY : src/benchmark.cc.o
 
-src/extended_euc.i: src/extended_euc.cpp.i
-.PHONY : src/extended_euc.i
+src/benchmark.i: src/benchmark.cc.i
+.PHONY : src/benchmark.i
 
 # target to preprocess a source file
-src/extended_euc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/extended_euc.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/extended_euc.cpp.i
-.PHONY : src/extended_euc.cpp.i
+src/benchmark.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/benchmark.cc.i
+.PHONY : src/benchmark.cc.i
 
-src/extended_euc.s: src/extended_euc.cpp.s
-.PHONY : src/extended_euc.s
+src/benchmark.s: src/benchmark.cc.s
+.PHONY : src/benchmark.s
 
 # target to generate assembly for a file
-src/extended_euc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/extended_euc.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/extended_euc.cpp.s
-.PHONY : src/extended_euc.cpp.s
+src/benchmark.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/benchmark.cc.s
+.PHONY : src/benchmark.cc.s
 
-src/fermat.o: src/fermat.cpp.o
-.PHONY : src/fermat.o
+src/fermat_method.o: src/fermat_method.cc.o
+.PHONY : src/fermat_method.o
 
 # target to build an object file
-src/fermat.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/fermat.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/fermat.cpp.o
-.PHONY : src/fermat.cpp.o
+src/fermat_method.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/fermat_method.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/fermat_method.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/fermat_method.cc.o
+.PHONY : src/fermat_method.cc.o
 
-src/fermat.i: src/fermat.cpp.i
-.PHONY : src/fermat.i
+src/fermat_method.i: src/fermat_method.cc.i
+.PHONY : src/fermat_method.i
 
 # target to preprocess a source file
-src/fermat.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/fermat.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/fermat.cpp.i
-.PHONY : src/fermat.cpp.i
+src/fermat_method.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/fermat_method.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/fermat_method.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/fermat_method.cc.i
+.PHONY : src/fermat_method.cc.i
 
-src/fermat.s: src/fermat.cpp.s
-.PHONY : src/fermat.s
+src/fermat_method.s: src/fermat_method.cc.s
+.PHONY : src/fermat_method.s
 
 # target to generate assembly for a file
-src/fermat.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/fermat.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/fermat.cpp.s
-.PHONY : src/fermat.cpp.s
+src/fermat_method.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/fermat_method.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/fermat_method.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/fermat_method.cc.s
+.PHONY : src/fermat_method.cc.s
 
-src/main.o: src/main.cpp.o
+src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.cc.o
+.PHONY : src/main.cc.o
 
-src/main.i: src/main.cpp.i
+src/main.i: src/main.cc.i
 .PHONY : src/main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.cc.i
+.PHONY : src/main.cc.i
 
-src/main.s: src/main.cpp.s
+src/main.s: src/main.cc.s
 .PHONY : src/main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.cc.s
+.PHONY : src/main.cc.s
 
-src/pollards_rho.o: src/pollards_rho.cpp.o
+src/pollards_rho.o: src/pollards_rho.cc.o
 .PHONY : src/pollards_rho.o
 
 # target to build an object file
-src/pollards_rho.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/pollards_rho.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o
-.PHONY : src/pollards_rho.cpp.o
+src/pollards_rho.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/pollards_rho.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/pollards_rho.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/pollards_rho.cc.o
+.PHONY : src/pollards_rho.cc.o
 
-src/pollards_rho.i: src/pollards_rho.cpp.i
+src/pollards_rho.i: src/pollards_rho.cc.i
 .PHONY : src/pollards_rho.i
 
 # target to preprocess a source file
-src/pollards_rho.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/pollards_rho.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/pollards_rho.cpp.i
-.PHONY : src/pollards_rho.cpp.i
+src/pollards_rho.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/pollards_rho.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/pollards_rho.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/pollards_rho.cc.i
+.PHONY : src/pollards_rho.cc.i
 
-src/pollards_rho.s: src/pollards_rho.cpp.s
+src/pollards_rho.s: src/pollards_rho.cc.s
 .PHONY : src/pollards_rho.s
 
 # target to generate assembly for a file
-src/pollards_rho.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/pollards_rho.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/pollards_rho.cpp.s
-.PHONY : src/pollards_rho.cpp.s
+src/pollards_rho.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/pollards_rho.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/pollards_rho.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/pollards_rho.cc.s
+.PHONY : src/pollards_rho.cc.s
 
-src/rsa.o: src/rsa.cpp.o
+src/rsa.o: src/rsa.cc.o
 .PHONY : src/rsa.o
 
 # target to build an object file
-src/rsa.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/rsa.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/rsa.cpp.o
-.PHONY : src/rsa.cpp.o
+src/rsa.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/rsa.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/rsa.cc.o
+.PHONY : src/rsa.cc.o
 
-src/rsa.i: src/rsa.cpp.i
+src/rsa.i: src/rsa.cc.i
 .PHONY : src/rsa.i
 
 # target to preprocess a source file
-src/rsa.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/rsa.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/rsa.cpp.i
-.PHONY : src/rsa.cpp.i
+src/rsa.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/rsa.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/rsa.cc.i
+.PHONY : src/rsa.cc.i
 
-src/rsa.s: src/rsa.cpp.s
+src/rsa.s: src/rsa.cc.s
 .PHONY : src/rsa.s
 
 # target to generate assembly for a file
-src/rsa.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/rsa.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/rsa.cpp.s
-.PHONY : src/rsa.cpp.s
+src/rsa.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/rsa.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/rsa.cc.s
+.PHONY : src/rsa.cc.s
 
-src/trial_division.o: src/trial_division.cpp.o
+src/rsa_utils.o: src/rsa_utils.cc.o
+.PHONY : src/rsa_utils.o
+
+# target to build an object file
+src/rsa_utils.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/rsa_utils.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/rsa_utils.cc.o
+.PHONY : src/rsa_utils.cc.o
+
+src/rsa_utils.i: src/rsa_utils.cc.i
+.PHONY : src/rsa_utils.i
+
+# target to preprocess a source file
+src/rsa_utils.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/rsa_utils.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/rsa_utils.cc.i
+.PHONY : src/rsa_utils.cc.i
+
+src/rsa_utils.s: src/rsa_utils.cc.s
+.PHONY : src/rsa_utils.s
+
+# target to generate assembly for a file
+src/rsa_utils.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/rsa_utils.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/rsa_utils.cc.s
+.PHONY : src/rsa_utils.cc.s
+
+src/trial_division.o: src/trial_division.cc.o
 .PHONY : src/trial_division.o
 
 # target to build an object file
-src/trial_division.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/trial_division.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/trial_division.cpp.o
-.PHONY : src/trial_division.cpp.o
+src/trial_division.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/trial_division.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/trial_division.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/trial_division.cc.o
+.PHONY : src/trial_division.cc.o
 
-src/trial_division.i: src/trial_division.cpp.i
+src/trial_division.i: src/trial_division.cc.i
 .PHONY : src/trial_division.i
 
 # target to preprocess a source file
-src/trial_division.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/trial_division.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/trial_division.cpp.i
-.PHONY : src/trial_division.cpp.i
+src/trial_division.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/trial_division.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/trial_division.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/trial_division.cc.i
+.PHONY : src/trial_division.cc.i
 
-src/trial_division.s: src/trial_division.cpp.s
+src/trial_division.s: src/trial_division.cc.s
 .PHONY : src/trial_division.s
 
 # target to generate assembly for a file
-src/trial_division.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factor_app.dir/build.make CMakeFiles/factor_app.dir/src/trial_division.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/trial_division.cpp.s
-.PHONY : src/trial_division.cpp.s
+src/trial_division.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/trial_division.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/trial_division.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_benchmark.dir/build.make CMakeFiles/run_benchmark.dir/src/trial_division.cc.s
+.PHONY : src/trial_division.cc.s
 
-tests/test_factorization.o: tests/test_factorization.cpp.o
-.PHONY : tests/test_factorization.o
+tests/test_implementation.o: tests/test_implementation.cc.o
+.PHONY : tests/test_implementation.o
 
 # target to build an object file
-tests/test_factorization.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_factorization.cpp.o
-.PHONY : tests/test_factorization.cpp.o
+tests/test_implementation.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_implementation.cc.o
+.PHONY : tests/test_implementation.cc.o
 
-tests/test_factorization.i: tests/test_factorization.cpp.i
-.PHONY : tests/test_factorization.i
+tests/test_implementation.i: tests/test_implementation.cc.i
+.PHONY : tests/test_implementation.i
 
 # target to preprocess a source file
-tests/test_factorization.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_factorization.cpp.i
-.PHONY : tests/test_factorization.cpp.i
+tests/test_implementation.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_implementation.cc.i
+.PHONY : tests/test_implementation.cc.i
 
-tests/test_factorization.s: tests/test_factorization.cpp.s
-.PHONY : tests/test_factorization.s
+tests/test_implementation.s: tests/test_implementation.cc.s
+.PHONY : tests/test_implementation.s
 
 # target to generate assembly for a file
-tests/test_factorization.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_factorization.cpp.s
-.PHONY : tests/test_factorization.cpp.s
+tests/test_implementation.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_implementation.cc.s
+.PHONY : tests/test_implementation.cc.s
 
 # Help Target
 help:
@@ -361,14 +407,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Catch2"
 	@echo "... Catch2WithMain"
-	@echo "... factor_app"
+	@echo "... app"
+	@echo "... run_benchmark"
 	@echo "... run_tests"
-	@echo "... src/extended_euc.o"
-	@echo "... src/extended_euc.i"
-	@echo "... src/extended_euc.s"
-	@echo "... src/fermat.o"
-	@echo "... src/fermat.i"
-	@echo "... src/fermat.s"
+	@echo "... src/benchmark.o"
+	@echo "... src/benchmark.i"
+	@echo "... src/benchmark.s"
+	@echo "... src/fermat_method.o"
+	@echo "... src/fermat_method.i"
+	@echo "... src/fermat_method.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -378,12 +425,15 @@ help:
 	@echo "... src/rsa.o"
 	@echo "... src/rsa.i"
 	@echo "... src/rsa.s"
+	@echo "... src/rsa_utils.o"
+	@echo "... src/rsa_utils.i"
+	@echo "... src/rsa_utils.s"
 	@echo "... src/trial_division.o"
 	@echo "... src/trial_division.i"
 	@echo "... src/trial_division.s"
-	@echo "... tests/test_factorization.o"
-	@echo "... tests/test_factorization.i"
-	@echo "... tests/test_factorization.s"
+	@echo "... tests/test_implementation.o"
+	@echo "... tests/test_implementation.i"
+	@echo "... tests/test_implementation.s"
 .PHONY : help
 
 

@@ -76,8 +76,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/factor_app.dir/DependInfo.cmake"
+  "CMakeFiles/app.dir/DependInfo.cmake"
   "CMakeFiles/run_tests.dir/DependInfo.cmake"
+  "CMakeFiles/run_benchmark.dir/DependInfo.cmake"
   "_deps/catch2-build/src/CMakeFiles/Catch2.dir/DependInfo.cmake"
   "_deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/DependInfo.cmake"
   )

@@ -72,108 +72,108 @@ include CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/codegen:
 .PHONY : CMakeFiles/run_tests.dir/codegen
 
-CMakeFiles/run_tests.dir/tests/test_factorization.cpp.o: CMakeFiles/run_tests.dir/flags.make
-CMakeFiles/run_tests.dir/tests/test_factorization.cpp.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/tests/test_factorization.cpp
-CMakeFiles/run_tests.dir/tests/test_factorization.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/run_tests.dir/tests/test_factorization.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/tests/test_factorization.cpp.o -MF CMakeFiles/run_tests.dir/tests/test_factorization.cpp.o.d -o CMakeFiles/run_tests.dir/tests/test_factorization.cpp.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/tests/test_factorization.cpp
+CMakeFiles/run_tests.dir/src/fermat_method.cc.o: CMakeFiles/run_tests.dir/flags.make
+CMakeFiles/run_tests.dir/src/fermat_method.cc.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/fermat_method.cc
+CMakeFiles/run_tests.dir/src/fermat_method.cc.o: CMakeFiles/run_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/run_tests.dir/src/fermat_method.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/src/fermat_method.cc.o -MF CMakeFiles/run_tests.dir/src/fermat_method.cc.o.d -o CMakeFiles/run_tests.dir/src/fermat_method.cc.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/fermat_method.cc
 
-CMakeFiles/run_tests.dir/tests/test_factorization.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/tests/test_factorization.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/tests/test_factorization.cpp > CMakeFiles/run_tests.dir/tests/test_factorization.cpp.i
+CMakeFiles/run_tests.dir/src/fermat_method.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/src/fermat_method.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/fermat_method.cc > CMakeFiles/run_tests.dir/src/fermat_method.cc.i
 
-CMakeFiles/run_tests.dir/tests/test_factorization.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/tests/test_factorization.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/tests/test_factorization.cpp -o CMakeFiles/run_tests.dir/tests/test_factorization.cpp.s
+CMakeFiles/run_tests.dir/src/fermat_method.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/src/fermat_method.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/fermat_method.cc -o CMakeFiles/run_tests.dir/src/fermat_method.cc.s
 
-CMakeFiles/run_tests.dir/src/fermat.cpp.o: CMakeFiles/run_tests.dir/flags.make
-CMakeFiles/run_tests.dir/src/fermat.cpp.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/fermat.cpp
-CMakeFiles/run_tests.dir/src/fermat.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/run_tests.dir/src/fermat.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/src/fermat.cpp.o -MF CMakeFiles/run_tests.dir/src/fermat.cpp.o.d -o CMakeFiles/run_tests.dir/src/fermat.cpp.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/fermat.cpp
+CMakeFiles/run_tests.dir/src/pollards_rho.cc.o: CMakeFiles/run_tests.dir/flags.make
+CMakeFiles/run_tests.dir/src/pollards_rho.cc.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/pollards_rho.cc
+CMakeFiles/run_tests.dir/src/pollards_rho.cc.o: CMakeFiles/run_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/run_tests.dir/src/pollards_rho.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/src/pollards_rho.cc.o -MF CMakeFiles/run_tests.dir/src/pollards_rho.cc.o.d -o CMakeFiles/run_tests.dir/src/pollards_rho.cc.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/pollards_rho.cc
 
-CMakeFiles/run_tests.dir/src/fermat.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/src/fermat.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/fermat.cpp > CMakeFiles/run_tests.dir/src/fermat.cpp.i
+CMakeFiles/run_tests.dir/src/pollards_rho.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/src/pollards_rho.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/pollards_rho.cc > CMakeFiles/run_tests.dir/src/pollards_rho.cc.i
 
-CMakeFiles/run_tests.dir/src/fermat.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/src/fermat.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/fermat.cpp -o CMakeFiles/run_tests.dir/src/fermat.cpp.s
+CMakeFiles/run_tests.dir/src/pollards_rho.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/src/pollards_rho.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/pollards_rho.cc -o CMakeFiles/run_tests.dir/src/pollards_rho.cc.s
 
-CMakeFiles/run_tests.dir/src/trial_division.cpp.o: CMakeFiles/run_tests.dir/flags.make
-CMakeFiles/run_tests.dir/src/trial_division.cpp.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/trial_division.cpp
-CMakeFiles/run_tests.dir/src/trial_division.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run_tests.dir/src/trial_division.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/src/trial_division.cpp.o -MF CMakeFiles/run_tests.dir/src/trial_division.cpp.o.d -o CMakeFiles/run_tests.dir/src/trial_division.cpp.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/trial_division.cpp
+CMakeFiles/run_tests.dir/src/rsa.cc.o: CMakeFiles/run_tests.dir/flags.make
+CMakeFiles/run_tests.dir/src/rsa.cc.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa.cc
+CMakeFiles/run_tests.dir/src/rsa.cc.o: CMakeFiles/run_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run_tests.dir/src/rsa.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/src/rsa.cc.o -MF CMakeFiles/run_tests.dir/src/rsa.cc.o.d -o CMakeFiles/run_tests.dir/src/rsa.cc.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa.cc
 
-CMakeFiles/run_tests.dir/src/trial_division.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/src/trial_division.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/trial_division.cpp > CMakeFiles/run_tests.dir/src/trial_division.cpp.i
+CMakeFiles/run_tests.dir/src/rsa.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/src/rsa.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa.cc > CMakeFiles/run_tests.dir/src/rsa.cc.i
 
-CMakeFiles/run_tests.dir/src/trial_division.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/src/trial_division.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/trial_division.cpp -o CMakeFiles/run_tests.dir/src/trial_division.cpp.s
+CMakeFiles/run_tests.dir/src/rsa.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/src/rsa.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa.cc -o CMakeFiles/run_tests.dir/src/rsa.cc.s
 
-CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o: CMakeFiles/run_tests.dir/flags.make
-CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/pollards_rho.cpp
-CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o -MF CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o.d -o CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/pollards_rho.cpp
+CMakeFiles/run_tests.dir/src/rsa_utils.cc.o: CMakeFiles/run_tests.dir/flags.make
+CMakeFiles/run_tests.dir/src/rsa_utils.cc.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa_utils.cc
+CMakeFiles/run_tests.dir/src/rsa_utils.cc.o: CMakeFiles/run_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run_tests.dir/src/rsa_utils.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/src/rsa_utils.cc.o -MF CMakeFiles/run_tests.dir/src/rsa_utils.cc.o.d -o CMakeFiles/run_tests.dir/src/rsa_utils.cc.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa_utils.cc
 
-CMakeFiles/run_tests.dir/src/pollards_rho.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/src/pollards_rho.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/pollards_rho.cpp > CMakeFiles/run_tests.dir/src/pollards_rho.cpp.i
+CMakeFiles/run_tests.dir/src/rsa_utils.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/src/rsa_utils.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa_utils.cc > CMakeFiles/run_tests.dir/src/rsa_utils.cc.i
 
-CMakeFiles/run_tests.dir/src/pollards_rho.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/src/pollards_rho.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/pollards_rho.cpp -o CMakeFiles/run_tests.dir/src/pollards_rho.cpp.s
+CMakeFiles/run_tests.dir/src/rsa_utils.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/src/rsa_utils.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa_utils.cc -o CMakeFiles/run_tests.dir/src/rsa_utils.cc.s
 
-CMakeFiles/run_tests.dir/src/rsa.cpp.o: CMakeFiles/run_tests.dir/flags.make
-CMakeFiles/run_tests.dir/src/rsa.cpp.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa.cpp
-CMakeFiles/run_tests.dir/src/rsa.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/run_tests.dir/src/rsa.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/src/rsa.cpp.o -MF CMakeFiles/run_tests.dir/src/rsa.cpp.o.d -o CMakeFiles/run_tests.dir/src/rsa.cpp.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa.cpp
+CMakeFiles/run_tests.dir/src/trial_division.cc.o: CMakeFiles/run_tests.dir/flags.make
+CMakeFiles/run_tests.dir/src/trial_division.cc.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/trial_division.cc
+CMakeFiles/run_tests.dir/src/trial_division.cc.o: CMakeFiles/run_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/run_tests.dir/src/trial_division.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/src/trial_division.cc.o -MF CMakeFiles/run_tests.dir/src/trial_division.cc.o.d -o CMakeFiles/run_tests.dir/src/trial_division.cc.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/trial_division.cc
 
-CMakeFiles/run_tests.dir/src/rsa.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/src/rsa.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa.cpp > CMakeFiles/run_tests.dir/src/rsa.cpp.i
+CMakeFiles/run_tests.dir/src/trial_division.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/src/trial_division.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/trial_division.cc > CMakeFiles/run_tests.dir/src/trial_division.cc.i
 
-CMakeFiles/run_tests.dir/src/rsa.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/src/rsa.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/rsa.cpp -o CMakeFiles/run_tests.dir/src/rsa.cpp.s
+CMakeFiles/run_tests.dir/src/trial_division.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/src/trial_division.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/trial_division.cc -o CMakeFiles/run_tests.dir/src/trial_division.cc.s
 
-CMakeFiles/run_tests.dir/src/extended_euc.cpp.o: CMakeFiles/run_tests.dir/flags.make
-CMakeFiles/run_tests.dir/src/extended_euc.cpp.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/extended_euc.cpp
-CMakeFiles/run_tests.dir/src/extended_euc.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/run_tests.dir/src/extended_euc.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/src/extended_euc.cpp.o -MF CMakeFiles/run_tests.dir/src/extended_euc.cpp.o.d -o CMakeFiles/run_tests.dir/src/extended_euc.cpp.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/extended_euc.cpp
+CMakeFiles/run_tests.dir/tests/test_implementation.cc.o: CMakeFiles/run_tests.dir/flags.make
+CMakeFiles/run_tests.dir/tests/test_implementation.cc.o: /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/tests/test_implementation.cc
+CMakeFiles/run_tests.dir/tests/test_implementation.cc.o: CMakeFiles/run_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/run_tests.dir/tests/test_implementation.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/tests/test_implementation.cc.o -MF CMakeFiles/run_tests.dir/tests/test_implementation.cc.o.d -o CMakeFiles/run_tests.dir/tests/test_implementation.cc.o -c /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/tests/test_implementation.cc
 
-CMakeFiles/run_tests.dir/src/extended_euc.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/src/extended_euc.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/extended_euc.cpp > CMakeFiles/run_tests.dir/src/extended_euc.cpp.i
+CMakeFiles/run_tests.dir/tests/test_implementation.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/tests/test_implementation.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/tests/test_implementation.cc > CMakeFiles/run_tests.dir/tests/test_implementation.cc.i
 
-CMakeFiles/run_tests.dir/src/extended_euc.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/src/extended_euc.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/src/extended_euc.cpp -o CMakeFiles/run_tests.dir/src/extended_euc.cpp.s
+CMakeFiles/run_tests.dir/tests/test_implementation.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/tests/test_implementation.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/tests/test_implementation.cc -o CMakeFiles/run_tests.dir/tests/test_implementation.cc.s
 
 # Object files for target run_tests
 run_tests_OBJECTS = \
-"CMakeFiles/run_tests.dir/tests/test_factorization.cpp.o" \
-"CMakeFiles/run_tests.dir/src/fermat.cpp.o" \
-"CMakeFiles/run_tests.dir/src/trial_division.cpp.o" \
-"CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o" \
-"CMakeFiles/run_tests.dir/src/rsa.cpp.o" \
-"CMakeFiles/run_tests.dir/src/extended_euc.cpp.o"
+"CMakeFiles/run_tests.dir/src/fermat_method.cc.o" \
+"CMakeFiles/run_tests.dir/src/pollards_rho.cc.o" \
+"CMakeFiles/run_tests.dir/src/rsa.cc.o" \
+"CMakeFiles/run_tests.dir/src/rsa_utils.cc.o" \
+"CMakeFiles/run_tests.dir/src/trial_division.cc.o" \
+"CMakeFiles/run_tests.dir/tests/test_implementation.cc.o"
 
 # External object files for target run_tests
 run_tests_EXTERNAL_OBJECTS =
 
-run_tests: CMakeFiles/run_tests.dir/tests/test_factorization.cpp.o
-run_tests: CMakeFiles/run_tests.dir/src/fermat.cpp.o
-run_tests: CMakeFiles/run_tests.dir/src/trial_division.cpp.o
-run_tests: CMakeFiles/run_tests.dir/src/pollards_rho.cpp.o
-run_tests: CMakeFiles/run_tests.dir/src/rsa.cpp.o
-run_tests: CMakeFiles/run_tests.dir/src/extended_euc.cpp.o
+run_tests: CMakeFiles/run_tests.dir/src/fermat_method.cc.o
+run_tests: CMakeFiles/run_tests.dir/src/pollards_rho.cc.o
+run_tests: CMakeFiles/run_tests.dir/src/rsa.cc.o
+run_tests: CMakeFiles/run_tests.dir/src/rsa_utils.cc.o
+run_tests: CMakeFiles/run_tests.dir/src/trial_division.cc.o
+run_tests: CMakeFiles/run_tests.dir/tests/test_implementation.cc.o
 run_tests: CMakeFiles/run_tests.dir/build.make
 run_tests: CMakeFiles/run_tests.dir/compiler_depend.ts
 run_tests: _deps/catch2-build/src/libCatch2Main.a

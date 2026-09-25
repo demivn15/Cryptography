@@ -357,7 +357,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=FactorizationProject
+CMAKE_PROJECT_NAME:STATIC=PrimeFactorizationAndRSA
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=3.4.0
@@ -472,13 +472,13 @@ FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 FETCHCONTENT_UPDATES_DISCONNECTED_CATCH2:BOOL=OFF
 
 //Value Computed by CMake
-FactorizationProject_BINARY_DIR:STATIC=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build
+PrimeFactorizationAndRSA_BINARY_DIR:STATIC=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms/build
 
 //Value Computed by CMake
-FactorizationProject_IS_TOP_LEVEL:STATIC=ON
+PrimeFactorizationAndRSA_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-FactorizationProject_SOURCE_DIR:STATIC=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms
+PrimeFactorizationAndRSA_SOURCE_DIR:STATIC=/home/demivn15/Documents/College/Seventh-Semester/Workshops/Cryptography/Integer-Factorization-Algorithms
 
 
 ########################

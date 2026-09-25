@@ -1,2 +1,0 @@
-# Empty dependencies file for factor_app.
-# This may be replaced when dependencies are built.
