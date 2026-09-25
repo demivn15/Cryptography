@@ -156,3 +156,66 @@ To evaluate the encryption and decryption performance (measuring execution time 
 ```bash
     go test -v -run TestAESBenchmark ./aesCore
 ```
+
+---
+
+# C++ Cryptography Toolkit & Integer Factorization Algorithms
+
+A robust C++ implementation of core cryptographic utilities, integer factorization algorithms, automated unit tests, and experimental performance benchmarks.
+
+---
+
+## Project Structure
+
+```text
+├── include/
+│   ├── fermat_method.h       # Fermat's factorization header
+│   ├── pollards_rho.h        # Pollard's Rho factorization header
+│   ├── rsa.h                 # RSA encryption/decryption header
+│   ├── rsa_utils.h           # Extended GCD & modular inverse utilities
+│   └── trial_division.h      # Trial Division factorization header
+├── src/
+│   ├── benchmark.cc          # Experimental evaluation & Fermat analysis
+│   ├── fermat_method.cc      # Precision-safe square root & Fermat implementation
+│   ├── main.cc               # Interactive toolkit CLI
+│   ├── pollards_rho.cc       # Pollard's Rho cycle-finding implementation
+│   ├── rsa.cc                # RSA cryptographic operations
+│   ├── rsa_utils.cc          # Extended Euclidean algorithm implementation
+│   └── trial_division.cc     # Trial Division implementation
+├── tests/
+│   └── test_implementation.cc # Catch2 unit test suite
+└── CMakeLists.txt            # CMake build configuration
+
+# Features & Getting Started
+
+## Features
+
+* **RSA Cryptographic Suite**: Key generation, modular exponentiation, and full encryption/decryption round-trip validation using custom Extended GCD modular inverses.
+* **Integer Factorization Toolkit**:
+  * **Trial Division**: Baseline sequential factor search.
+  * **Fermat's Method**: Difference-of-squares factorization optimized with precision-safe 128-bit binary search square roots.
+  * **Pollard's Rho**: Probabilistic cycle-finding factorization algorithm.
+* **Automated Unit Testing**: Comprehensive test suite powered by Catch2 validating GCD bounds, modular inverses, square roots, factor verification ($p \times q = n$), and RSA round-trip consistency.
+* **Experimental Benchmarking**: Performance evaluation program measuring execution speeds across varying bit sizes and analyzing the impact of factor distance ($\vert{}p - q\vert{}$) on Fermat's efficiency.
+
+## Getting Started
+
+### Prerequisites
+
+* A modern C++ compiler supporting C++17 or higher (e.g., `g++` / `clang++`).
+* CMake (version 3.14 or higher).
+
+´´´bash
+mkdir build
+cd build
+cmake ..
+make
+´´´
+
+# Build Outputs
+
+This will generate three primary executables inside your `build` directory[cite: 3]:
+
+* **`app`**: The interactive Cryptography Toolkit CLI[cite: 3].
+* **`run_tests`**: The Catch2 automated test suite[cite: 3].
+* **`run_benchmark`**: The experimental evaluation & Fermat analysis runner[cite: 3].
